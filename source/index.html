@@ -11,10 +11,8 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo" href="#">
+    <a class="main-header__logo" href="index.html">
       <img class="main-header__logo-image" src="#" width="33" height="38" alt="Логотип - кот">
-    </a>
-    <a class="logo" href="#">
       <img class="logo-slogan" src="#" alt="Логотип - слоган" width="101" height="18">
     </a>
     <nav class="main-nav">
@@ -22,19 +20,19 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
+        <ul class="site-list main-nav__list">
           <li class="site-list__item site-list__item--active">
             <a href="index.html">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a href="#">
+            <a href="catalog.html">
               Каталог продукции
             </a>
           </li>
           <li class="site-list__item">
-            <a href="#">
+            <a href="programm.html">
               Подбор программы
             </a>
           </li>
@@ -42,23 +40,23 @@
       </div>
     </nav>
   </header>
+  <section class="promotion">
+    <div class="promotion__wrapper">
+      <header class="promotion__header">
+        <h1 class="promotion__title">
+          Функциональное питание для котов
+        </h1>
+        <p class="promotion__intro promotion__intro--succeed">
+          Занялся собой? Займись котом!
+        </p>
+        <img class="promotion__image" src="#" width="280" height="270" alt="Кошачье питание в баночке">
+        <a class="promotion__link promotion__link--succeed" href="programm.html">
+          Подобрать программу
+        </a>
+      </header>
+    </div>
+  </section>
   <main class="main-container">
-    <section class="promotion">
-      <div class="promotion__wrapper">
-        <header class="promotion__header">
-          <h1 class="promotion__title">
-            Функциональное питание для котов
-          </h1>
-          <p class="promotion__intro promotion__intro--succeed">
-            Занялся собой? Займись котом!
-          </p>
-          <img class="promotion__image" src="#" width="280" height="270" alt="Кошачье питание в баночке">
-          <button class="promotion__button promotion__button--succeed" type="button">
-            Подобрать программу
-          </button>
-        </header>
-      </div>
-    </section>
     <section class="dignities">
       <div class="dignities__wrapper">
         <h2 class="visually-hidden">Похудение и набор массы с нашим питанием</h2>
@@ -77,9 +75,9 @@
       </div>
     </section>
     <section class="advantages">
-      <div class="advatages__wrapper">
+      <div class="advantages__wrapper">
         <h2 class="visually-hidden">Преимущества питания нашей марки</h2>
-        <h3 class="advantages__title">Как это работает</h3>
+        <p class="advantages__title">Как это работает</p>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--useful">
             <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
@@ -96,40 +94,38 @@
         </ul>
       </div>
     </section>
-
     <section class="example">
       <div class="example__wrapper">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="example__list--wrapper">
+        <div class="example__checklist example__checklist--wrapper">
           <ul class="example__list">
             <li class="example__stats">
-              <p class="example__stats--description"><span>5</span>кг</p>
-              <p class="example__stats--description">снижение веса</p>
+              <p class="example__subtitle"><span>5</span>кг</p>
+              <p class="example__subtitle">снижение веса</p>
             </li>
             <li class="example__stats">
               <p><span>60</span>дней</p>
-              <p class="example__stats--description">затрачено времени</p>
+              <p class="example__subtitle">затрачено времени</p>
             </li>
           </ul>
-          <p class="example__stats--text">Затраты на питание: 15 000 РУБ.</p>
+          <p class="example__text">Затраты на питание: 15 000 РУБ.</p>
         </div>
-        <ul class="example__items slider__list">
-          <li class="slider__items--image">
-            <img src="#" alt="Упитанный кот" width="280" height="256">
-          </li>
-          <li class="slider__items--image">
-            <img src="#" alt="Худой кот" width="280" height="256">
-          </li>
-        </ul>
-        <p class="example__toggles slider__toggles">
-          <button class="slider__toggle" type="button">
-            <span class="visually-hidden">Стрелочка вправо</span>
-          </button>
-          <button class="slider__toggle" type="button">
-            <span class="visually-hidden">Стрелочка влево</span>
-          </button>
-        </p>
+        <div class="slider">
+          <ul class="slider__list">
+            <li class="slider__item">
+              <img src="#" alt="Упитанный кот" width="280" height="256">
+            </li>
+            <li class="slider__item">
+              <img src="#" alt="Худой кот" width="280" height="256">
+            </li>
+          </ul>
+          <p class="example__toggles slider__toggles">
+            <button class="slider__toggle" type="button">
+              <span class="visually-hidden">Элемент управления картинкой</span>
+            </button>
+          </p>
+        </div>
       </div>
     </section>
   </main>
@@ -142,9 +138,9 @@
   </section>
   <footer class="main-footer">
     <h2 class="visually-hidden">Как нас найти</h2>
-    <!-- <iframe class="footer__map" src="#" frameborder="0"></iframe> -->
+    <img src="№" alt="Мы на карте" width="320" height="362">
     <div class="main-footer__wrapper">
-      <img class="footer__logo logo" src="#" alt="Логотип слоган" width="128" height="24">
+      <img class="main-footer__logo logo" src="#" alt="Логотип слоган" width="128" height="24">
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -159,8 +155,7 @@
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="#">HTML Academy</a>
-        <a class="copyright__logo" href="#">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
           <img src="#" alt="Логотип Html-Академии" width="27" height="34">
         </a>
       </div>
