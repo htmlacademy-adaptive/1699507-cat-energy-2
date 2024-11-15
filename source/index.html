@@ -5,7 +5,14 @@
   <meta charset="UTF-8">
   <title>Питание для котов</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Подключение фавиконок -->
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/icon-180.png"><!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <!-- Подключение стилей -->
   <link rel="stylesheet" href="styles/styles.css">
+  <!-- Подключение скриптов -->
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -48,7 +55,11 @@
           <p class="promotion__intro promotion__intro--succeed">
             Занялся собой? Займись котом!
           </p>
-          <img class="promotion__image" src="#" width="280" height="270" alt="Кошачье питание в баночке">
+          <picture>
+            <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/index-images/pot-promo-desktop@1x.png 1x, images/index-images/pot-promo-desktop@2x.png 2x">
+            <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/index-images/pot-promo-tablet@1x.png 1x, images/index-images/pot-promo-tablet@2x.png 2x">
+            <img class="promotion__image" src="images/index-images/pot-pomo-mobile@1x.png" srcset="images/index-images/pot-pomo-mobile@2x.png 2x" width="280" height="270" alt="Кошачье питание в баночке">
+          </picture>
           <a class="promotion__link promotion__link--succeed" href="programm.html">
             Подобрать программу
           </a>
@@ -114,10 +125,16 @@
         <div class="slider">
           <ul class="slider__list">
             <li class="slider__item">
-              <img src="#" alt="Упитанный кот" width="280" height="256">
+              <picture>
+                <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index-images/cat-before-tablet-desktop@1x.png 1x, images/index-images/cat-before-tablet-desktop@2x.png 2x">
+                <img src="images/index-images/cat-before-mobile@1x.png" srcset="images/index-images/cat-before-mobile@2x.png 2x" alt="Упитанный кот" width="280" height="256">
+              </picture>
             </li>
             <li class="slider__item">
-              <img src="#" alt="Худой кот" width="280" height="256">
+              <picture>
+                <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index-images/cat-after-tablet-desctop@1x.png 1x, images/index-images/cat-after-tablet-desctop@2x.png 2x">
+                <img src="images/index-images/cat-after-mobile@1x.png" srcset="images/index-images/cat-after-mobile@2x.png 2x" alt="Худой кот" width="280" height="256">
+              </picture>
             </li>
           </ul>
           <p class="example__toggles slider__toggles">
@@ -138,7 +155,11 @@
   </section>
   <footer class="main-footer">
     <h2 class="visually-hidden">Как нас найти</h2>
-    <img src="№" alt="Мы на карте" width="320" height="362">
+    <picture>
+      <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/location-desktop@1x.png 1x, images/location-desktop@2x.png 2x">
+      <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x">
+      <img src="images/location-mobile@1x.png" srcset="images/location-mobile@2x.png 2x" alt="Мы на карте" width="320" height="362">
+    </picture>
     <!-- <iframe src="#" frameborder="0"></iframe> -->
     <div class="main-footer__wrapper">
       <img class="main-footer__logo logo" src="#" alt="Логотип слоган" width="128" height="24">
