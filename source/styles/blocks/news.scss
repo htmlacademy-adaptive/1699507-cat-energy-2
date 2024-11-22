@@ -1,0 +1,39 @@
+.news {
+
+}
+
+.news__wrapper {
+
+}
+
+.news__title {
+  font-family: $additional-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $optional-color;
+  font-weight: $font-weight;
+}
+
+.news__description {
+  font-family: $additional-font;
+  font-size: 16px;
+  line-height: 24px;
+  color: $optional-color;
+}
+
+.news__form {
+
+}
+
+.news__field {
+  font-family: $additional-font;
+  font-size: 20px;
+  line-height: 30px;
+  color: $base-color-text;
+  text-transform: $text-transform;
+}
+
+.news__button {
+  font-size: 20px;
+  line-height: 26px;
+}

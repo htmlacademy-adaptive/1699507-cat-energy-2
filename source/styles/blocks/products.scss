@@ -1,0 +1,51 @@
+.products {
+
+}
+
+.products__wrapper {
+
+}
+
+.products__title {
+  font-family: $additional-font;
+  font-weight: $font-weight;
+  font-size: 36px;
+  line-height: 36px;
+  color: $optional-color;
+}
+
+.products__text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.products__item {
+
+}
+
+.products__image {
+
+}
+
+.products__subtitle {
+  font-family: $additional-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: $text-transform;
+  color: $ad-special_dark-grey;
+  font-weight: $font-weight;
+
+  &--change {
+    color: #111111;
+  }
+}
+
+.products__list {
+
+}
+
+.products__link {
+  font-size: 16px;
+  color: $base-color-text;
+  line-height: 20px;
+}
