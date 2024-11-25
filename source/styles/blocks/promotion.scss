@@ -1,7 +1,8 @@
 .promotion {
-  // background-color: $bg-basic-green;
-  background-image: linear-gradient($bg-basic-green 65%, #ffffff 30%);
-  background-size: 100%;
+  background-image: url("../../images/index-images/cat-bg-mobile@2x.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .promotion__wrapper {
