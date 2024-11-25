@@ -11,17 +11,44 @@
 }
 
 .social__link {
-
+  min-width: 28px;
+  min-height: 28px;
+  display: block;
 }
 
-.social__link--vkontakte {
+.social__link--vkontakte::before {
+  content: "";
+  display: block;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#vkontakte-icon");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+  min-width: 28px;
+  min-height: 22px;
 
+  &:hover {
+    color: #000000;
+  }
 }
 
-.social__link--youtube {
-
+.social__link--youtube::before {
+  content: "";
+  display: block;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#youtube-icon");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+  min-width: 28px;
+  min-height: 22px;
 }
 
-.social__link--telegram {
-
+.social__link--telegram::before {
+  content: "";
+  display: block;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#telegram-icon");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+  min-width: 28px;
+  min-height: 22px;
 }

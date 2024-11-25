@@ -1,5 +1,6 @@
 .advantages {
-
+  padding-left: 20px;
+  width: 280px;
 }
 
 .advantages__wrapper {
@@ -11,14 +12,55 @@
   font-size: 36px;
   line-height: 40px;
   color: $optional-color;
+  margin-bottom: 40px;
 }
 
 .advantages__list {
-
+  list-style-type: none;
 }
 
 .advantages__item {
+  margin-bottom: 20px;
 
+  &::before {
+    content: "";
+    display: block;
+    background-color: $bg-basic-green;
+    width: 60px;
+    height: 60px;
+  }
+
+  &--useful::before {
+    content: "";
+    background-image: url("../../icons/stack.svg#leaf-icon");
+    background-size: 30px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--powder::before {
+    content: "";
+    background-image: url("../../icons/stack.svg#powder-icon");
+    background-size: 26px 29px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--meal::before {
+    content: "";
+    background-image: url("../../icons/stack.svg#eat-icon");
+    background-size: 25px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--time::before {
+    content: "";
+    background-image: url("../../icons/stack.svg#time-icon");
+    background-size: 26px 31px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .advantages__item--useful {
@@ -26,17 +68,5 @@
 }
 
 .advantages__description {
-
-}
-
-.advantages__item--powder {
-
-}
-
-.advantages__item--meal {
-
-}
-
-.advantages__item--time {
 
 }

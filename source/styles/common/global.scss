@@ -1,4 +1,10 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

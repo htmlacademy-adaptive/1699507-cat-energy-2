@@ -3,7 +3,16 @@
 }
 
 .main-nav__toggle {
+  background-color: #ffffff;
+  background-image: url("../../icons/stack.svg#burger-button");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  border: none;
 
+  &--close {
+    background-image: url("../../icons/stack.svg#close-button");
+  }
 }
 
 .main-nav__wrapper {

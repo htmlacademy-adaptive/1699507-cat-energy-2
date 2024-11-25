@@ -19,11 +19,15 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="#" width="33" height="38" alt="Логотип - кот">
-      <img class="logo-slogan" src="#" alt="Логотип - слоган" width="101" height="18">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="60" height="50" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="33" height="38" type="image/svg+xml">
+        <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип - кот">
+      </picture>
+      <img class="logo-slogan" src="images/logo-text.svg" alt="Логотип - слоган" width="101" height="18">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle main-nav__toggle--close" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
@@ -138,7 +142,7 @@
             </li>
           </ul>
           <p class="example__toggles slider__toggles">
-            <button class="slider__toggle" type="button">
+            <button class="slider__button" type="button">
               <span class="visually-hidden">Элемент управления картинкой</span>
             </button>
           </p>
@@ -162,23 +166,31 @@
     </picture>
     <!-- <iframe src="#" frameborder="0"></iframe> -->
     <div class="main-footer__wrapper">
-      <img class="main-footer__logo logo" src="#" alt="Логотип слоган" width="128" height="24">
+      <img class="main-footer__logo logo" src="images/logo-text.svg" alt="Логотип слоган" width="128" height="24">
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#">Мы в Контакте</a>
+            <a class="social__link social__link--vkontakte" href="#">
+              <p class="visually-hidden">Мы в Контакте</p>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">Мы в Ютубе</a>
+            <a class="social__link social__link--youtube" href="#">
+              <p class="visually-hidden">Мы в Ютубе</p>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="#">Мы в Телеграме</a>
+            <a class="social__link social__link--telegram" href="#">
+              <p class="visually-hidden">Мы в Телеграме</p>
+            </a>
           </li>
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-          <img src="#" alt="Логотип Html-Академии" width="27" height="34">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Академии">HTML Academy
+          <svg role="img" width="27" height="34">
+            <use href="../../icons/stack.svg#logo_html"></use>
+          </svg>
         </a>
       </div>
     </div>

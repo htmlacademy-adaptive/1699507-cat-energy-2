@@ -1,5 +1,7 @@
 .promotion {
-  background-color: $bg-basic-green;
+  // background-color: $bg-basic-green;
+  background-image: linear-gradient($bg-basic-green 65%, #ffffff 30%);
+  background-size: 100%;
 }
 
 .promotion__wrapper {
@@ -15,6 +17,8 @@
   font-size: 36px;
   line-height: 36px;
   color: $additional-color;
+  font-weight: $font-weight;
+  text-align: center;
 }
 
 .promotion__intro {
@@ -22,6 +26,8 @@
   line-height: 14px;
   color: $additional-color;
   text-transform: $text-transform;
+  text-align: center;
+  margin-bottom: 29px;
 }
 
 .promotion__intro--succeed {
@@ -29,13 +35,17 @@
 }
 
 .promotion__image {
-
+  display: block;
+  margin: 0 auto;
 }
 
 .promotion__link {
-
+  text-decoration: none;
+  padding: 10px 64px;
+  width: 280px;
 }
 
 .promotion__link--succeed {
-
+  display: block;
+  margin: 0 auto;
 }
