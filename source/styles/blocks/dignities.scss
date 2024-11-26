@@ -86,11 +86,20 @@
     background-color: $optional-color;
     mask-image: url("../../icons/stack.svg#arrow");
     mask-repeat: no-repeat;
-    mask-size: 32px 10px;
-    width: 32px;
+    mask-size: 18px 10px;
+    width: 18px;
     height: 10px;
     left: 112px;
     bottom: 25px;
+  }
+
+  &:hover::before {
+    mask-size: 32px 10px;
+    width: 32px;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 

@@ -3,7 +3,33 @@
 }
 
 .copyright__link {
+  position: relative;
   font-size: 16px;
   line-height: 20px;
-  color: $base-color-text;
+  text-decoration: none;
+  display: block;
+  color: #444444;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    mask-image: url("../../icons/stack.svg#logo_html");
+    background-color: #666666;
+    mask-repeat: no-repeat;
+    width: 27px;
+    height: 34px;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:hover::before {
+    background-color: $bg-basic-green;
+  }
+
+  &:active::before {
+    background-color: $bg-basic-green;
+  }
 }

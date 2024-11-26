@@ -1,5 +1,5 @@
 .slider {
-
+  position: relative;
 }
 
 .slider__list {
@@ -10,6 +10,62 @@
 
 }
 
-.slider__button {
+.slider__toggles {
 
+}
+
+.slider__button {
+  position: absolute;
+  background-color: #666666;
+  height: 100%;
+  width: 4px;
+  top: 0;
+  left: 25%;
+  border: none;
+  border-radius: 2px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    border: 2px solid #666666;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #666666;
+    width: 24px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mask-image: url("../../icons/stack.svg#slider-arrow");
+    mask-repeat: no-repeat;
+  }
+
+  &:hover::before,
+  &:active::before {
+    border-color: $bg-basic-green;
+  }
+
+  &:hover::after,
+  &:active::after {
+    background-color: $bg-basic-green;
+  }
+
+  &:hover {
+    background-color: $bg-basic-green;
+  }
+
+  &:active {
+    background-color: $bg-basic-green;
+    opacity: 0.6;
+  }
 }
