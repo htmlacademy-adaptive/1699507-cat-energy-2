@@ -1,9 +1,12 @@
-.append-products {
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
 
+.append-products {
+  //
 }
 
 .append-products__wrapper {
-
+  //
 }
 
 .append-products__title {
@@ -15,11 +18,11 @@
 }
 
 .append-products__list {
-
+  //
 }
 
 .append-products__item {
-
+  //
 }
 
 .append-products__subtitle {
@@ -31,7 +34,7 @@
 }
 
 .append-products__volume {
-
+  //
 }
 
 .append-products__text {
@@ -39,19 +42,25 @@
 }
 
 .append-products__link {
-
+  //
 }
 
 .append-products__surprise {
   background-color: $bg-basic-green;
+  width: 280px;
+
+  &--present {
+    background-image: url("../../icons/stack.svg#present-icon");
+    background-size: 78px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .append-products__comment {
   font-size: 16px;
   line-height: 20px;
   color: $additional-color;
-}
-
-.append-products__surprise--present {
-
+  padding-bottom: 44px;
+  padding-top: 188px;
 }

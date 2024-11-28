@@ -1,17 +1,12 @@
-.products {
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
 
+.products {
+  //
 }
 
 .products__wrapper {
-
-}
-
-.products__title {
-  font-family: $additional-font;
-  font-weight: $font-weight;
-  font-size: 36px;
-  line-height: 36px;
-  color: $optional-color;
+  //
 }
 
 .products__text {
@@ -20,11 +15,11 @@
 }
 
 .products__item {
-
+  //
 }
 
 .products__image {
-
+  //
 }
 
 .products__subtitle {
@@ -41,7 +36,7 @@
 }
 
 .products__list {
-
+  //
 }
 
 .products__link {

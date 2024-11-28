@@ -1,3 +1,6 @@
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
+
 .button {
   background-color: $bg-basic-green;
   font-family: $additional-font;

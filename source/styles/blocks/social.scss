@@ -1,27 +1,61 @@
-.social {
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
 
+.social {
+  //
 }
 
 .social__list {
-
+  //
 }
 
 .social__item {
-
+  //
 }
 
 .social__link {
+  width: 28px;
+  height: 28px;
+  display: block;
 
+  &:hover::before {
+    background-color: $bg-basic-green;
+  }
+
+  &:active::before {
+    background-color: rgba($bg-basic-green, 0.5);
+  }
 }
 
-.social__link--vkontakte {
-
+.social__link--vkontakte::before {
+  content: "";
+  display: block;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#vkontakte-icon");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+  width: 28px;
+  height: 22px;
 }
 
-.social__link--youtube {
-
+.social__link--youtube::before {
+  content: "";
+  display: block;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#youtube-icon");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+  width: 28px;
+  height: 22px;
 }
 
-.social__link--telegram {
-
+.social__link--telegram::before {
+  content: "";
+  display: block;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#telegram-icon");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+  width: 28px;
+  height: 22px;
 }

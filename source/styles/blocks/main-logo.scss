@@ -1,3 +1,17 @@
-.logo {
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
 
+// .logo {
+// }
+
+.main-header__logo {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

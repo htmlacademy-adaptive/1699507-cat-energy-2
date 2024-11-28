@@ -1,19 +1,28 @@
-.main-footer {
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
 
+.main-footer {
+  //
 }
 
 .main-footer__wrapper {
-
+  //
 }
 
 .main-footer__logo {
+  &:hover {
+    opacity: 0.8;
+  }
 
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .main-footer__social {
-
+  //
 }
 
 .main-footer__copyright {
-
+  //
 }

@@ -1,13 +1,19 @@
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
+
 .promotion {
-  background-color: $bg-basic-green;
+  background-image: url("../../images/index-images/cat-bg-mobile@2x.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .promotion__wrapper {
-
+  //
 }
 
 .promotion__header {
-
+  //
 }
 
 .promotion__title {
@@ -15,6 +21,8 @@
   font-size: 36px;
   line-height: 36px;
   color: $additional-color;
+  font-weight: $font-weight;
+  text-align: center;
 }
 
 .promotion__intro {
@@ -22,20 +30,26 @@
   line-height: 14px;
   color: $additional-color;
   text-transform: $text-transform;
+  text-align: center;
+  margin-bottom: 29px;
 }
 
 .promotion__intro--succeed {
-
+  //
 }
 
 .promotion__image {
-
+  display: block;
+  margin: 0 auto;
 }
 
 .promotion__link {
-
+  text-decoration: none;
+  padding: 10px 64px;
+  width: 280px;
 }
 
 .promotion__link--succeed {
-
+  display: block;
+  margin: 0 auto;
 }
