@@ -9,6 +9,16 @@
   text-transform: $text-transform;
   display: block;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    width: 436px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 475px;
+  }
 }
 
 .site-list__item {

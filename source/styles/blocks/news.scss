@@ -2,11 +2,13 @@
 @use "../common/variables.scss" as *;
 
 .news {
-  //
+  @media (min-width: $desktop-width) {
+    padding-bottom: 104px;
+  }
 }
 
 .news__wrapper {
-  //
+
 }
 
 .news__title {
@@ -15,6 +17,12 @@
   line-height: 24px;
   color: $optional-color;
   font-weight: $font-weight;
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    padding-left: 50px;
+    margin-bottom: 66px;
+  }
 }
 
 .news__description {
@@ -22,11 +30,29 @@
   font-size: 16px;
   line-height: 24px;
   color: $optional-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    text-align: center;
+    width: 632px;
+    padding-left: 68px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    line-height: 32px;
+    width: 800px;
+    margin-bottom: 24px;
+  }
 }
 
 .news__form {
-  //
+  @media (min-width: $tablet-width) {
+    padding-left: 48px;
+  }
 }
+
 
 .news__field {
   font-family: $additional-font;

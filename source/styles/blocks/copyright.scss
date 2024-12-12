@@ -13,17 +13,6 @@
   display: block;
   color: #444444;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    mask-image: url("../../icons/stack.svg#logo_html");
-    background-color: #666666;
-    mask-repeat: no-repeat;
-    width: 27px;
-    height: 34px;
-  }
-
   &:active {
     opacity: 0.6;
   }
@@ -35,4 +24,10 @@
   &:active::before {
     background-color: $bg-basic-green;
   }
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  fill: $bg-basic-green;
 }

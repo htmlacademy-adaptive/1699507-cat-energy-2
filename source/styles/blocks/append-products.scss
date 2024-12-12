@@ -2,11 +2,22 @@
 @use "../common/variables.scss" as *;
 
 .append-products {
-  //
+  @media (min-width: $tablet-width) {
+    padding-bottom: 80px;
+  }
+}
+
+.append-products__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .append-products__wrapper {
-  //
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .append-products__title {
@@ -15,14 +26,30 @@
   line-height: 24px;
   color: $optional-color;
   font-weight: $font-weight;
+  margin-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 50px;
+  }
 }
 
 .append-products__list {
-  //
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 28px;
+    outline: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 896px;
+  }
 }
 
 .append-products__item {
-  //
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .append-products__subtitle {
@@ -31,29 +58,34 @@
   line-height: 16px;
   font-weight: $font-weight;
   color: $ad-special_dark-grey;
+  text-transform: $text-transform;
+  margin-bottom: 13px;
 }
 
 .append-products__volume {
-  //
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .append-products__text {
   line-height: 14px;
 }
 
-.append-products__link {
-  //
-}
-
 .append-products__surprise {
   background-color: $bg-basic-green;
-  width: 280px;
 
   &--present {
     background-image: url("../../icons/stack.svg#present-icon");
     background-size: 78px 80px;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    height: 288px;
   }
 }
 
@@ -63,4 +95,6 @@
   color: $additional-color;
   padding-bottom: 44px;
   padding-top: 188px;
+  width: 161px;
+  min-height: 60px;
 }

@@ -2,11 +2,19 @@
 @use "../common/variables.scss" as *;
 
 .example {
-  //
+  background-color: #eaeaea;
+  padding-top: 25px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(#ffffff 72%, #eaeaea 50%);
+  }
 }
 
 .example__wrapper {
-  //
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .example__title {
@@ -15,26 +23,29 @@
   line-height: 40px;
   color: $optional-color;
   font-weight: $font-weight;
+  margin-bottom: 40px;
 }
 
 .example__description {
-  //
+  margin-bottom: 20px;
 }
 
 .example__checklist {
-  //
+
 }
 
 .example__checklist--wrapper {
-  //
+
 }
 
 .example__list {
-  //
+  list-style-type: none;
+  display: flex;
 }
 
 .example__stats {
-  //
+  width: 124px;
+  min-height: 70px;
 }
 
 .example__subtitle {
@@ -55,8 +66,9 @@
   line-height: 20px;
   text-transform: $text-transform;
   color: $optional-color;
+  margin-bottom: 20px;
 }
 
 .example__toggles {
-  //
+
 }

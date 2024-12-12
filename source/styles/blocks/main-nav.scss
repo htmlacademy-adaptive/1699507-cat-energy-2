@@ -2,7 +2,12 @@
 @use "../common/variables.scss" as *;
 
 .main-nav {
-  //
+  min-height: 65px;
+}
+
+.main-nav__user {
+  padding-top: 13px;
+  padding-bottom: 14px;
 }
 
 .main-nav__toggle {
@@ -12,16 +17,30 @@
   width: 24px;
   height: 24px;
   border: none;
+  margin-left: 58px;
 
   &--close {
     background-image: url("../../icons/stack.svg#close-button");
   }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__wrapper {
-  //
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 704px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+  }
 }
 
 .main-nav__list {
-  //
+
 }

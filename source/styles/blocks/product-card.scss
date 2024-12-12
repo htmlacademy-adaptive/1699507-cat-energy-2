@@ -1,0 +1,80 @@
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
+
+.product-card {
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 324px;
+    background-color: #f2f2f2;
+    margin-bottom: 120px;
+  }
+}
+
+.product-card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.products__text {
+  font-size: 12px;
+  line-height: 16px;
+
+  &--change {
+    margin-bottom: 21px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 82px;
+    }
+  }
+}
+
+.products__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.products__wrapper {
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
+}
+
+.products__link {
+  display: block;
+  text-decoration: none;
+}
+
+.products__subtitle {
+  font-family: $additional-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: $text-transform;
+  color: $ad-special_dark-grey;
+  font-weight: $font-weight;
+  width: 76px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 125px;
+  }
+
+  &--change {
+    width: 204px;
+    color: #111111;
+    margin: 0 auto;
+    margin-bottom: 8px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 23px;
+    }
+  }
+
+  // @media (min-width: $tablet-width) {
+  //   width: 324px;
+  // }
+}
+

@@ -2,7 +2,7 @@
 @use "../common/variables.scss" as *;
 
 .dignities {
-  //
+
 }
 
 .dignities__wrapper {
@@ -11,8 +11,17 @@
 
 .dignities__list {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    width: 1220px;
+  }
 }
 
 .dignities__item {
@@ -34,6 +43,13 @@
     left: 27px;
     top: 21px;
     z-index: 1;
+
+    @media (min-width: $tablet-width) {
+      background-size: 140px 194px;
+      width: 140px;
+      height: 194px;
+      margin-left: 475px;
+    }
   }
 
   &--fat::before {
@@ -48,6 +64,21 @@
     left: 13px;
     top: 35px;
     z-index: 1;
+
+    @media (min-width: $tablet-width) {
+      background-size: 268px 200px;
+      width: 268px;
+      height: 200px;
+      margin-left: 411px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 63px 57px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
   }
 }
 
@@ -58,7 +89,7 @@
   text-transform: $text-transform;
   color: $optional-color;
   font-weight: $font-weight;
-  padding-bottom: 29px;
+  margin-bottom: 29px;
   padding-left: 90px;
 
   &::before {
@@ -71,6 +102,17 @@
     border-radius: 50%;
     top: 24px;
     left: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 445px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    margin-bottom: 24px;
   }
 }
 
@@ -95,6 +137,11 @@
     height: 10px;
     left: 112px;
     bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      bottom: 62px;
+      left: 155px;
+    }
   }
 
   &:hover::before {
@@ -105,10 +152,24 @@
   &:active {
     opacity: 0.6;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
 }
 
 .dignities__description {
   width: 227px;
   margin-bottom: 38px;
   padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 340px;
+    padding-left: 0;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 457px;
+  }
 }

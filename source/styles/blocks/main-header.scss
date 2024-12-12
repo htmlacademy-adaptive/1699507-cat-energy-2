@@ -2,13 +2,32 @@
 @use "../common/variables.scss" as *;
 
 .main-header {
-  //
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header__logo--wrapper {
+  width: 270px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+  }
 }
 
 .main-header__logo {
-  //
+  height: 38px;
+
+  @media (min-width: $tablet-width) {
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 59px;
+  }
 }
 
-.main-header__logo-image {
-  //
-}
+// .main-header__logo-image {}

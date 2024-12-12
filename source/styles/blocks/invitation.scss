@@ -2,11 +2,19 @@
 @use "../common/variables.scss" as *;
 
 .invitation {
-  //
+
 }
 
 .invitation__wrapper {
-  //
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-around;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 565px;
+  }
 }
 
 .invitation__description {
@@ -15,8 +23,16 @@
   line-height: 20px;
   text-transform: $text-transform;
   color: #111111;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+  }
 }
 
 .invitation__adress {
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 157px;
+  }
 }

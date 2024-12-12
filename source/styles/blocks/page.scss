@@ -2,7 +2,7 @@
 @use "../common/variables.scss" as *;
 
 .page {
-  //
+
 }
 
 .page__body {
@@ -19,4 +19,9 @@
   font-size: 36px;
   line-height: 36px;
   color: $optional-color;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 84px;
+  }
 }

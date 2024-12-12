@@ -2,15 +2,16 @@
 @use "../common/variables.scss" as *;
 
 .social {
-  //
+
 }
 
 .social__list {
-  //
+  display: flex;
+  list-style-type: none;
 }
 
 .social__item {
-  //
+
 }
 
 .social__link {

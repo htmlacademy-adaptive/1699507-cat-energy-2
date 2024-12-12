@@ -8,4 +8,36 @@
   line-height: 20px;
   color: $additional-color;
   text-transform: $text-transform;
+  text-decoration: none;
+  display: block;
+
+  &--products {
+    display: block;
+    width: 100%;
+    padding: 10px 109px;
+    margin-bottom: 32px;
+
+    @media (min-width: $tablet-width) {
+      width: 250px;
+      padding: 10px 94px;
+      margin: 32px auto 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 244px;
+      padding: 10px 91px;
+    }
+  }
+
+  &--change {
+    background-color: #f2f2f2;
+    color: #444444;
+    padding: 10px 80px;
+  }
+
+  &--additional {
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
+  }
 }

@@ -2,11 +2,14 @@
 @use "../common/variables.scss" as *;
 
 .main-footer {
-  //
+
 }
 
 .main-footer__wrapper {
-  //
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .main-footer__logo {
@@ -20,9 +23,19 @@
 }
 
 .main-footer__social {
-  //
+  display: flex;
 }
 
 .main-footer__copyright {
-  //
+
+}
+
+.main-footer__location {
+  width: 100%;
+  height: 362px;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
