@@ -185,11 +185,13 @@
     @media (min-width: $desktop-width) {
       margin: 0;
       margin-left: -12px;
-
-      &--change {
-        margin-left: -31px;
-      }
     }
+  }
+}
+
+.example__text--change {
+  @media (min-width: $desktop-width) {
+    margin-left: -31px;
   }
 }
 
@@ -210,4 +212,3 @@
     flex-wrap: wrap;
   }
 }
-
