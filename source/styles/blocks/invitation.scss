@@ -2,22 +2,46 @@
 @use "../common/variables.scss" as *;
 
 .invitation {
+  padding-top: 28px;
+  padding-bottom: 26px;
+  background-color: #f2f2f2;
 
+  &--index {
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .invitation__wrapper {
   display: flex;
 
   @media (min-width: $tablet-width) {
-    justify-content: space-around;
+    width: 628px;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
+    position: absolute;
     width: 565px;
+    min-height: 201px;
+    padding: 60px 78px 59px 73px;
+    background-color: #ffffff;
+    margin-top: 95px;
+    z-index: 3;
   }
 }
 
 .invitation__description {
+  margin: 0;
+  width: 140px;
   font-family: $additional-font;
   font-size: 16px;
   line-height: 20px;
@@ -26,13 +50,45 @@
 
   @media (min-width: $tablet-width) {
     width: 163px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 6px;
   }
 }
 
 .invitation__adress {
-  line-height: 20px;
+  margin: 0;
+  width: 140px;
+  margin-top: 3px;
+
+  &--change {
+    margin-top: 4px;
+  }
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     width: 157px;
+    margin-left: auto;
+    text-align: right;
+    line-height: 20px;
+    font-size: 16px;
+
+    &--change {
+      margin-top: 19px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-top: -2px;
+
+    &--change {
+      margin-top: 17px;
+    }
   }
 }
+

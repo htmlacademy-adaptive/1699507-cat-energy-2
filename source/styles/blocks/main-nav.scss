@@ -2,30 +2,124 @@
 @use "../common/variables.scss" as *;
 
 .main-nav {
-  min-height: 65px;
+  width: 100%;
+  background-color: #ffffff;
+
+  &--change {
+    border-bottom: 1px solid #d9d9d9;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 29px;
+  }
+}
+
+.main-nav__logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  height: 38px;
+  width: 200px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 50px;
+    width: 174px;
+    margin-right: 94px;
+
+    &--catalog {
+      margin-right: 96px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 59px;
+    width: 202px;
+  }
+}
+
+.main-nav__logo-image {
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 59px;
+  }
 }
 
 .main-nav__user {
   padding-top: 13px;
-  padding-bottom: 14px;
+
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    padding-top: 25px;
+  }
+}
+
+.main-nav__user--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 8px 00 #000000, 0 16px 00 #000000;
+  right: 10px;
+  top: 1px;
+}
+
+.main-nav__user--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: #000000;
+    right: 6px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav__user--closed .site-list__item {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .main-nav__toggle {
+  position: absolute;
   background-color: #ffffff;
-  background-image: url("../../icons/stack.svg#burger-button");
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
   border: none;
-  margin-left: 58px;
-
-  &--close {
-    background-image: url("../../icons/stack.svg#close-button");
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  background-size: 18px 18px;
+  cursor: pointer;
+  right: 10px;
+  top: 21px;
+  display: none;
 }
 
 .main-nav__wrapper {
@@ -34,13 +128,19 @@
     justify-content: space-between;
     width: 704px;
     margin: 0 auto;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1220px;
+    margin: 0;
+    margin-top: 5px;
+    margin-left: auto;
+    width: 477px;
   }
 }
 
 .main-nav__list {
-
+  margin: 0;
+  padding: 0;
 }
+

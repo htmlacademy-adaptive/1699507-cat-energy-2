@@ -5,9 +5,75 @@
   background-color: #eaeaea;
   padding-top: 25px;
   box-sizing: border-box;
+  padding-bottom: 33px;
 
   @media (min-width: $tablet-width) {
-    background-image: linear-gradient(#ffffff 72%, #eaeaea 50%);
+    background-image: linear-gradient(#ffffff 616px, #eaeaea 100px);
+    padding-top: 46px;
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 75px;
+    background-image: linear-gradient(#ffffff 160px, #eaeaea 110px);
+    padding-top: 24px;
+  }
+}
+
+.example__cover {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.example__title {
+  margin: 0;
+  font-family: $additional-font;
+  font-size: 36px;
+  line-height: 40px;
+  color: $optional-color;
+  font-weight: $font-weight;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 146px;
+  }
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 704px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 432px;
+    margin-bottom: 69px;
+  }
+}
+
+.example__checklist {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 
@@ -17,58 +83,131 @@
   }
 }
 
-.example__title {
-  font-family: $additional-font;
-  font-size: 36px;
-  line-height: 40px;
-  color: $optional-color;
-  font-weight: $font-weight;
-  margin-bottom: 40px;
-}
-
-.example__description {
-  margin-bottom: 20px;
-}
-
-.example__checklist {
-
-}
-
-.example__checklist--wrapper {
-
-}
-
 .example__list {
+  margin: 0;
   list-style-type: none;
   display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    gap: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    margin-bottom: 55px;
+  }
 }
 
 .example__stats {
+  padding: 14px 20px 17px;
+  position: relative;
   width: 124px;
-  min-height: 70px;
+  justify-content: center;
+  outline: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 57px 20px;
+    width: 161px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 57px 25px;
+    width: 160px;
+  }
 }
 
 .example__subtitle {
+  margin: 0;
+  display: flex;
+  justify-content: center;
   font-family: $additional-font;
   font-size: 24px;
   line-height: 24px;
   text-transform: $text-transform;
   color: $optional-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__signature {
+  margin: 0 auto;
   font-size: 12px;
   line-height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  bottom: -16px;
+  left: -4px;
+  right: 0;
+  width: 87px;
+  text-align: center;
+  background-color: #eaeaea;
+
+  @media (min-width: $tablet-width) {
+    width: 145px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+    bottom: -5px;
+    left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: #eaeaea;
+    bottom: -1px;
+  }
 }
 
 .example__text {
+  margin: 36px 2px 20px;
   font-family: $additional-font;
   line-height: 20px;
   text-transform: $text-transform;
   color: $optional-color;
-  margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 185px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    margin-top: 10px;
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+      margin-left: -12px;
+
+      &--change {
+        margin-left: -31px;
+      }
+    }
+  }
 }
 
-.example__toggles {
+.example__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
 
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 }
+

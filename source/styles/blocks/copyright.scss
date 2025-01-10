@@ -2,32 +2,45 @@
 @use "../common/variables.scss" as *;
 
 .copyright {
-  //
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .copyright__link {
-  position: relative;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
   display: block;
   color: #444444;
 
+  @media (min-width: $tablet-width) {
+    margin-right: 22px;
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 11px;
+    margin-right: 23px;
+  }
+
   &:active {
     opacity: 0.6;
-  }
-
-  &:hover::before {
-    background-color: $bg-basic-green;
-  }
-
-  &:active::before {
-    background-color: $bg-basic-green;
   }
 }
 
 .copyright__logo {
   width: 27px;
   height: 34px;
-  fill: $bg-basic-green;
+  fill: #666666;
+
+  &:hover {
+    fill: $bg-basic-green;
+  }
+
+  &:active {
+    fill: $bg-basic-green;
+    opacity: 0.6;
+  }
 }

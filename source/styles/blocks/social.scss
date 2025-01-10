@@ -1,17 +1,22 @@
 @use "../common/fonts.scss" as *;
 @use "../common/variables.scss" as *;
 
-.social {
-
-}
-
 .social__list {
   display: flex;
   list-style-type: none;
-}
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 18px;
 
-.social__item {
-
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding-top: 6px;
+    width: 132px;
+    margin-left: 34px;
+    justify-content: space-between;
+    gap: 0;
+  }
 }
 
 .social__link {
@@ -26,6 +31,10 @@
   &:active::before {
     background-color: rgba($bg-basic-green, 0.5);
   }
+}
+
+.social__item {
+  margin-left: 0;
 }
 
 .social__link--vkontakte::before {

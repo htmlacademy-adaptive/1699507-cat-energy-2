@@ -2,7 +2,9 @@
 @use "../common/variables.scss" as *;
 
 .dignities {
-
+  @media (min-width: $desktop-width) {
+    padding-top: 82px;
+  }
 }
 
 .dignities__wrapper {
@@ -10,17 +12,21 @@
 }
 
 .dignities__list {
+  margin: 0;
   list-style-type: none;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     width: 708px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     column-gap: 80px;
-    width: 1220px;
+    width: 1280px;
   }
 }
 
@@ -41,14 +47,23 @@
     width: 36px;
     height: 50px;
     left: 27px;
-    top: 21px;
+    top: 24px;
     z-index: 1;
 
     @media (min-width: $tablet-width) {
       background-size: 140px 194px;
       width: 140px;
       height: 194px;
-      margin-left: 475px;
+      margin-left: 449px;
+      top: 82px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-size: 70px 97px;
+      width: 70px;
+      height: 97px;
+      top: 41px;
+      margin-left: 40px;
     }
   }
 
@@ -69,20 +84,32 @@
       background-size: 268px 200px;
       width: 268px;
       height: 200px;
-      margin-left: 411px;
+      margin-left: 398px;
+      top: 90px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-size: 134px 56px;
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      margin-left: 20px;
     }
   }
 
   @media (min-width: $tablet-width) {
     padding: 77px 63px 57px 52px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: $desktop-width) {
     width: 570px;
+    margin: 0;
   }
 }
 
 .dignities__title {
+  margin: 0;
   font-family: $additional-font;
   font-size: 24px;
   line-height: 37px;
@@ -100,19 +127,41 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    top: 24px;
+    top: 25px;
     left: 20px;
 
     @media (min-width: $tablet-width) {
-      margin-left: 445px;
+      margin-left: 426px;
       width: 200px;
       height: 200px;
+      top: 92px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 100px;
+      margin-left: 33px;
+      top: 46px;
     }
   }
 
   @media (min-width: $tablet-width) {
     padding-left: 0;
     margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+    text-align: center;
+    margin-left: 33px;
+  }
+
+  &--change {
+    @media (min-width: $desktop-width) {
+      margin-left: 74px;
+    }
   }
 }
 
@@ -132,44 +181,62 @@
     background-color: $optional-color;
     mask-image: url("../../icons/stack.svg#arrow");
     mask-repeat: no-repeat;
-    mask-size: 18px 10px;
-    width: 18px;
-    height: 10px;
-    left: 112px;
-    bottom: 25px;
+    mask-size: 34px 12px;
+    width: 34px;
+    height: 12px;
+    right: 125px;
+    bottom: 23px;
 
     @media (min-width: $tablet-width) {
-      bottom: 62px;
-      left: 155px;
+      bottom: 66px;
+      left: 183px;
+      width: 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 180px;
     }
   }
 
+  @media (min-width: $tablet-width) {
+    padding-left: 1px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &:hover::before {
-    mask-size: 32px 10px;
-    width: 32px;
+    mask-size: 38px 14px;
+    width: 38px;
   }
 
   &:active {
-    opacity: 0.6;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-left: 0;
+    opacity: 0.5;
   }
 }
 
 .dignities__description {
-  width: 227px;
-  margin-bottom: 38px;
+  margin: 0;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 22px;
   padding-left: 20px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     width: 340px;
-    padding-left: 0;
-    margin-bottom: 48px;
+    padding: 0;
+    margin-bottom: 51px;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 457px;
+    margin-bottom: 27px;
   }
 }
+

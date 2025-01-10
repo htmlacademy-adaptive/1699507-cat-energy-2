@@ -1,0 +1,13 @@
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
+
+.page-title {
+  font-size: 36px;
+  line-height: 40px;
+  color: $optional-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

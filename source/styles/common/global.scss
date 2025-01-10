@@ -1,12 +1,8 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  background-size: cover;
 }
 
 .visually-hidden {

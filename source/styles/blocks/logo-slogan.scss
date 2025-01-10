@@ -3,4 +3,14 @@
 
 .logo-slogan {
   margin-left: 56px;
+  margin-top: -3px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
 }
