@@ -1,23 +1,19 @@
 import { readFileSync, rmSync } from 'node:fs';
 
-import gulp from 'gulp';
-import plumber from 'gulp-plumber';
-import htmlmin from 'gulp-htmlmin';
-import * as dartSass from 'sass';
-import gulpSass from 'gulp-sass';
-import postcss from 'gulp-postcss';
-import postUrl from 'postcss-url';
-import lightningcss from 'postcss-lightningcss';
-import { createGulpEsbuild } from 'gulp-esbuild';
-import browserslistToEsbuild from 'browserslist-to-esbuild';
-import sharp from 'gulp-sharp-responsive';
-import svgo from 'gulp-svgmin';
-import { stacksvg } from 'gulp-stacksvg';
 import server from 'browser-sync';
+import browserslistToEsbuild from 'browserslist-to-esbuild';
+import gulp from 'gulp';
+import { createGulpEsbuild } from 'gulp-esbuild';
 import bemlinter from 'gulp-html-bemlinter';
+import htmlmin from 'gulp-htmlmin';
+import plumber from 'gulp-plumber';
+import postcss from 'gulp-postcss';
+import rename from 'gulp-rename';
+import sharp from 'gulp-sharp-responsive';
+import { stacksvg } from 'gulp-stacksvg';
+import svgo from 'gulp-svgmin';
 
 const { src, dest, watch, series, parallel } = gulp;
-const sass = gulpSass(dartSass);
 const PATH_TO_SOURCE = './source/';
 const PATH_TO_DIST = './build/';
 const PATH_TO_RAW = './raw/';
@@ -47,28 +43,8 @@ export function lintBem () {
 export function processStyles () {
   return src(`${PATH_TO_SOURCE}styles/*.scss`, { sourcemaps: isDevelopment })
     .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([
-      postUrl([
-        {
-          filter: '**/*',
-          assetsPath: '../',
-        },
-        {
-          filter: '**/icons/**/*.svg',
-          url: (asset) => asset.url.replace(
-            /icons\/(.+?)\.svg$/,
-            (match, p1) => `icons/stack.svg#${p1.replace(/\//g, '_')}`
-          ),
-          multi: true,
-        },
-      ]),
-      lightningcss({
-        lightningcssOptions: {
-          minify: !isDevelopment,
-        },
-      })
-    ]))
+    .pipe(postcss({ isDevelopment }))
+    .pipe(rename({ extname: '.css' }))
     .pipe(dest(`${PATH_TO_DIST}styles`, { sourcemaps: isDevelopment }))
     .pipe(server.stream());
 }

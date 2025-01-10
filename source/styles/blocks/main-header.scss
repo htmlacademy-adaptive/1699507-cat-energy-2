@@ -1,0 +1,50 @@
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(90deg, #ffffff 50%, rgba(104, 183, 56, 0.9,) 50%), image-set("../images/index-images/cat-bg-desktop@1x.webp" 1x type("image/webp"), "../images/index-images/cat-bg-desktop@2x.webp" 2x type("image/webp"), "../images/index-images/cat-bg-desktop@1x.jpeg" 1x type("image/jpg"), "../images/index-images/cat-bg-desktop@2x.jpeg" 2x type("image/jpg")), linear-gradient(90deg, #ffffff 50%, #454449 50%);
+
+
+    background-size: 100%, 1041px 694px;
+    background-position: center, calc(50% + 520px) top;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 694px;
+  }
+}
+
+.main-header__logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  height: 38px;
+  width: 200px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 50px;
+    width: 174px;
+    margin-right: 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 59px;
+    width: 202px;
+  }
+}
+
+.main-header__logo-image {
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 59px;
+  }
+}

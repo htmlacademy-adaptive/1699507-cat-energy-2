@@ -1,0 +1,79 @@
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
+
+.button {
+  background-color: $bg-basic-green;
+  font-family: $additional-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: $additional-color;
+  text-transform: $text-transform;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &--products {
+    display: block;
+    width: 100%;
+    padding: 10px 109px;
+    margin-bottom: 24px;
+
+    @media (min-width: $tablet-width) {
+      width: 250px;
+      padding: 10px 94px;
+      margin: 25px auto 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 169px;
+      padding: 10px 53px;
+      margin-top: 32px;
+    }
+  }
+
+  &--change {
+    background-color: #f2f2f2;
+    color: #444444;
+    padding: 10px 80px;
+    width: 280px;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 250px;
+      margin: -5px auto -17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 169px;
+      padding: 10px 39px;
+    }
+  }
+
+  &--additional {
+    margin-bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+      margin: 0;
+      padding: 10px 285px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 244px;
+      padding: 10px 91px;
+      height: 40px;
+      margin-top: -10px;
+    }
+  }
+}

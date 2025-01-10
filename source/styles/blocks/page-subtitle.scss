@@ -1,0 +1,53 @@
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
+
+.page-subtitle {
+  font-size: 24px;
+  line-height: 24px;
+  position: relative;
+  color: $optional-color;
+  font-weight: $font-weight;
+  margin: 0;
+  font-family: $additional-font;
+  width: fit-content;
+  background-color: #ffffff;
+  box-shadow:
+    -40px 0 0 0 #ffffff,
+    40px 0 0 0 #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100vw;
+    height: 2px;
+    top: 10px;
+    background: $bg-basic-green;
+    box-shadow: 100vw 0 0 0 $bg-basic-green;
+    z-index: -1;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+
+    &::before {
+      top: 13px;
+    }
+
+    box-shadow: 40px 0 0 0 #ffffff;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+    box-shadow:
+      -40px 0 0 0 #ffffff,
+      40px 0 0 0 #ffffff;
+
+    &::before {
+      top: 18px;
+    }
+  }
+}

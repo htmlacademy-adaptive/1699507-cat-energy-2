@@ -1,0 +1,71 @@
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
+
+.social__list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding-top: 6px;
+    width: 132px;
+    margin-left: 34px;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.social__link {
+  width: 28px;
+  height: 28px;
+  display: block;
+
+  &:hover::before {
+    background-color: $bg-basic-green;
+  }
+
+  &:active::before {
+    background-color: rgba($bg-basic-green, 0.5);
+  }
+}
+
+.social__item {
+  margin-left: 0;
+}
+
+.social__link--vkontakte::before {
+  content: "";
+  display: block;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#vkontakte-icon");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+  width: 28px;
+  height: 22px;
+}
+
+.social__link--youtube::before {
+  content: "";
+  display: block;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#youtube-icon");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+  width: 28px;
+  height: 22px;
+}
+
+.social__link--telegram::before {
+  content: "";
+  display: block;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#telegram-icon");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+  width: 28px;
+  height: 22px;
+}

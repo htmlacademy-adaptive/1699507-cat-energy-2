@@ -1,0 +1,110 @@
+@use "../common/fonts.scss" as *;
+@use "../common/variables.scss" as *;
+
+.site-list {
+  list-style-type: none;
+  font-family: $additional-font;
+  line-height: 20px;
+  font-size: 20px;
+  text-transform: $text-transform;
+  display: block;
+  padding: 0;
+
+  &--change {
+    margin-top: 14px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    font-size: 18px;
+    line-height: 24px;
+    width: 436px;
+    gap: 33px;
+
+    &--catalog {
+      gap: 36px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 477px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: auto;
+  }
+}
+
+.site-list__item {
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border-top: 1px solid #e6e6e6;
+  text-align: center;
+
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    border: none;
+    padding: 0;
+
+    &--change {
+      margin-left: 3px;
+    }
+
+    &--active {
+      position: relative;
+    }
+
+    &--active::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+      left: 0;
+      height: 2px;
+      background: $bg-basic-green;
+    }
+  }
+}
+
+
+.site-list__link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: $optional-color;
+  margin-left: -2px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: #ffffff;
+
+    &--active-index::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      left: 0;
+      height: 2px;
+      background: #ffffff;
+    }
+  }
+
+  &--change {
+    @media (min-width: $desktop-width) {
+      color: #000000;
+    }
+  }
+}
