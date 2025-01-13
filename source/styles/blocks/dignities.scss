@@ -174,17 +174,16 @@
   padding-left: 20px;
 
   &--arrow::before {
-    content: "";
-    display: block;
     position: absolute;
-    background-color: $optional-color;
-    mask-image: url("../../icons/stack.svg#arrow");
-    mask-repeat: no-repeat;
-    mask-size: 34px 12px;
-    width: 34px;
-    height: 12px;
     right: 125px;
     bottom: 23px;
+    content: "";
+    display: block;
+    width: 28px;
+    height: 11px;
+    background-image: url("../../icons/stack.svg#arrow");
+    background-repeat: no-repeat;
+    background-position: -5px 0;
 
     @media (min-width: $tablet-width) {
       bottom: 66px;
@@ -204,8 +203,7 @@
   }
 
   &:hover::before {
-    mask-size: 38px 14px;
-    width: 38px;
+    background-position: 0 0;
   }
 
   &:active {
