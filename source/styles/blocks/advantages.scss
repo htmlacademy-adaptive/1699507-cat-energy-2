@@ -29,7 +29,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 74px;
+    margin-top: 44px;
     margin-bottom: 71px;
   }
 }
@@ -51,6 +51,8 @@
   @media (min-width: $desktop-width) {
     display: flex;
     column-gap: 79px;
+    flex-wrap: wrap;
+    width: 1220px;
   }
 }
 
