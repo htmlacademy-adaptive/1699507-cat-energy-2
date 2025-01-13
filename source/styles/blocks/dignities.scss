@@ -174,24 +174,24 @@
   padding-left: 20px;
 
   &--arrow::before {
+    content: "";
     position: absolute;
     right: 125px;
     bottom: 23px;
-    content: "";
     display: block;
     width: 28px;
     height: 11px;
     background-image: url("../../icons/stack.svg#arrow");
     background-repeat: no-repeat;
-    background-position: -5px 0;
+    background-position: -5px;
 
     @media (min-width: $tablet-width) {
       bottom: 66px;
-      left: 183px;
+      right: 495px;
     }
 
     @media (min-width: $desktop-width) {
-      left: 180px;
+      right: 360px;
     }
   }
 
@@ -202,7 +202,7 @@
   }
 
   &:hover::before {
-    background-position: 0 0;
+    background-position: 0;
   }
 
   &:active {
